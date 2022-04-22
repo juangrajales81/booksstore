@@ -4,9 +4,10 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
-class ProductController
+class ProductController extends AbstractController
 {
     /**
      *  @Route("/product")
@@ -15,8 +16,8 @@ class ProductController
     {
         $number = random_int(0, 100);
 
-        return new Response(
-            '<html><body>Product number: ' . $number . '</body></html>'
-        );
+        return $this->render('product/number.html.twig', [
+            'number' => $number,
+        ]);
     }
 }
