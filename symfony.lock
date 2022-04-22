@@ -1,4 +1,10 @@
 {
+    "paragonie/random_compat": {
+        "version": "v9.99.100"
+    },
+    "paragonie/sodium_compat": {
+        "version": "v1.17.1"
+    },
     "psr/cache": {
         "version": "3.0.0"
     },
